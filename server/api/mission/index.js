@@ -1,0 +1,19 @@
+'use strict';
+
+var express = require('express');
+var controller = require('./mission.controller');
+
+var router = express.Router();
+
+//router.get('/', controller.index);
+//router.get('/:id', controller.show);
+//router.post('/', controller.create);
+//router.put('/:id', controller.upsert);
+//router.patch('/:id', controller.patch);
+//router.delete('/:id', controller.destroy);
+
+router.get('/countries-by-isolation', controller.countriesByIsolation);
+router.get('/find-closest', controller.closest);
+router.get('/find-farthest', controller.farthest);
+
+module.exports = router;

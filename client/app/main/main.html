@@ -1,0 +1,29 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>MI6 Mission Dashboard</h1>
+    <p class="lead">Tikal Node.js Code Challenge</p>
+    <img src="assets/images/mi6logo.png" width="100px" alt="Bond, James Bond!">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-12">
+      <div class="panel panel-danger isolated-pane">
+        <div class="panel-heading">
+          <h3 class="panel-title">Most Isolated Country:</h3>
+        </div>
+        <div class="panel-body">
+          <a href="#" data-ng-click="$ctrl.position = $ctrl.mostIsolatedCountry.country"><h1>{{$ctrl.mostIsolatedCountry.country}} ({{$ctrl.mostIsolatedCountry.isolation}})</h1></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12" style="margin: 10px">
+      <ng-map zoom="4" center="{{$ctrl.position}}">
+        <marker position="{{$ctrl.position}}"
+                icon="https://image.ibb.co/fWy2J5/clsfd_marker.png">
+        </marker>
+      </ng-map>
+    </div>
+  </div>
+</div>
